@@ -10,7 +10,7 @@ return {
 			},
 			view = {
 				width = 30,
-				relativenumber = true,
+				relativenumber = false,
 				side = "left",
 			},
 			renderer = {

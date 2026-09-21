@@ -37,6 +37,14 @@ return {
             settings = {},
             on_attach = function(_, bufnr)
                 vim.lsp.semantic_tokens.enable(true, { bufnr = bufnr })
+                local map = function(mode, lhs, rhs, desc)
+                    vim.keymap.set(mode, lhs, rhs, {
+                        buffer = bufnr,
+                        silent = true,
+                        desc = desc,
+                    })
+                end
+                map("n", "<leader>ca", vim.lsp.buf.code_action, "Kotlin 导入类/代码操作")
             end,
         })
         vim.lsp.enable("kmp_lsp")
@@ -46,7 +54,7 @@ return {
             settings = {
                 Lua = {
                     diagnostics = {
-                        globals = { "vim" ,"" }
+                        globals = { "vim" }
                     },
                 },
             },
