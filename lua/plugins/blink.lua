@@ -4,7 +4,7 @@ return{
     dependencies = {
         "rafamadriz/friendly-snippets"
     },
-    event = "VeryLazy",
+    lazy = false,
     opts = {
         completion = {
             documentation = {
@@ -13,6 +13,10 @@ return{
         },
         keymap = {
             preset = "super-tab",
+            ["<C-Space>"] = {
+                "show",
+                "fallback",
+            },
         },
         sources = {
             default = {"path" ,"snippets", "buffer" , "lsp"}

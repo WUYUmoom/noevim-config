@@ -11,11 +11,11 @@ vim.o.mouse = 'a'
 -- 自动缩进
 vim.o.smartindent = true
 -- 100毫秒没有输入文件将会自动保存交换文件
---vim.o.updatetime = 150
+vim.o.updatetime = 150
 -- 开启颜色
 vim.o.termguicolors = true
 -- 设置代码长度提示
-vim.opt.colorcolumn = "100"
+--vim.opt.colorcolumn = "100"
 -- tab转为空格
 vim.opt.expandtab = true
 -- 设置tab的空格数量
