@@ -3,4 +3,9 @@ require("core.basic")
 require("core.keymap")
 require("core.lazy")
 require("config.kotlin")
-
+require("config.colors").setup()
+vim.api.nvim_create_autocmd("ColorScheme",{
+    callback = function()
+        require("config.colors").setup()
+    end,
+})
