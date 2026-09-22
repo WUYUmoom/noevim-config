@@ -11,6 +11,7 @@ vim.keymap.set({ "n", "i" , "x", "o" }, "<C-s>", "<CMD>wall<CR>")
 vim.keymap.set({ "n", "i" , "x", "o" }, "<C-q>", "<CMD>wqall<CR>")
 --设置全选
 vim.keymap.set({ "n", "i" }, "<C-a>","gg<S-v>G" )
+vim.keymap.set( { "n" }, "<leader>ca", vim.lsp.buf.code_action )
 --     ^
 --     u
 -- < n   i >
