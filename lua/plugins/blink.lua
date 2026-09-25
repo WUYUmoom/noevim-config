@@ -6,11 +6,8 @@ return{
     },
     lazy = false,
     opts = {
-        completion = {
-            documentation = {
-                auto_show = true
-            }
-        },
+        completion = {documentation = {auto_show = false,},
+        menu = {auto_show_delay_ms = 0,},},
         keymap = {
             preset = "super-tab",
             ["<C-Space>"] = {
@@ -19,7 +16,10 @@ return{
             },
         },
         sources = {
-            default = {"path" ,"snippets", "buffer" , "lsp"}
+            default = {"path" ,"snippets", "buffer" , "lsp"},
+            per_filetype = {
+                kotlin = { "lsp" },
+            },
         },
         cmdline ={
             sources = function ()

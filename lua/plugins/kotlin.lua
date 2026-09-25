@@ -18,18 +18,18 @@ return {
                 "pom.xml",
                 ".git",
             },
-            jdk_for_symbol_resolution = nil,
+            jdk_for_symbol_resolution = vim.env.JAVA_HOME,
             jvm_args = {
-                "-Xmx5g"
+                "-Xmx3g"
             },
             build_tool = "gradle",
             inlay_hints = {
-                enabled = true,
+                enabled = false,
             },
             folding = {
-                enabled = true,
+                enabled = false,
             },
-            java_files = true,
+            java_files = false,
             reload_workspace ={
                 on_build_file_save ="ask",
             },
